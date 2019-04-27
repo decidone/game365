@@ -19,13 +19,9 @@ app.get('/topic',function(req,res){
     })
 })
 
+// 파일시스템을 사용하지 않을 때
 app.get('/topic/new', function(req,res){
-    fs.readdir('data', function(err,files){
-        if(err){
-            res.send('Internal File Error');
-        }
-        res.render('new',{topics:files});
-    })
+    res.render('new');
 })
 
 app.get('/topic/:id',function(req,res){

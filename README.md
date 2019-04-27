@@ -2,11 +2,8 @@
 
 실행을 위한 초기 설정
 1. git에서 다운
-2. npm install express --save
-3. npm install pug --save
-4. npm install body-parser --save
-5. npm install supervisor -g
-6. supervisor index.js
+2. npm install	//package-lock.json 파일에 설정이 다 되어있으므로 npm install만 입력하면 된다.
+3. supervisor index.js
 
 
 전체 공통적인 레이아웃 - 타이틀, 유저ID 및 로그아웃
