@@ -4,7 +4,7 @@
 1. git에서 다운
 2. npm install express --save
 3. npm install pug --save
-4. npm istall body-parser --save
+4. npm install body-parser --save
 5. npm install supervisor -g
 6. supervisor index.js
 
