@@ -4,8 +4,9 @@
 1. git에서 다운
 2. npm install express --save
 3. npm install pug --save
-4. npm install supervisor -g
-5. supervisor index.js
+4. npm istall body-parser --save
+5. npm install supervisor -g
+6. supervisor index.js
 
 
 전체 공통적인 레이아웃 - 타이틀, 유저ID 및 로그아웃
