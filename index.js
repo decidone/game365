@@ -3,6 +3,16 @@ var bodyparser = require('body-parser');    //body-parser --save 필요
 var app = express();
 var fs = require('fs'); // 설치 안해도 쓸 수 있는 파일시스템
 
+// DB 사용을 위한 기초 설정
+var mysql = require('mysql');
+var conn = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'cs1234',
+    database : 'game365'
+});
+
+
 app.set('view engine','pug');
 app.set('views','./views');
 app.use(bodyparser.urlencoded({extended:true}));
@@ -20,8 +30,17 @@ app.get('/topic',function(req,res){
 })
 
 // 파일시스템을 사용하지 않을 때
+// DB 테스트 추가
 app.get('/topic/new', function(req,res){
-    res.render('new');
+    //conn.connect();
+    conn.query('SELECT * FROM test', function (err, results){
+        if(err){
+            console.log(err);
+        }
+        //object타입 배열로 result 리턴을 topics객체에 넣어서 pug페이지로 전달
+        res.render('new',{topics:results});
+    });
+    //conn.end();  //connect(), end()를 사용하면 err 출력
 })
 
 app.get('/topic/:id',function(req,res){
