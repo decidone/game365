@@ -5,8 +5,10 @@ html
         meta(charset='utf-8')
         title 회원정보 수정
     body
-        div(id="title") GAME365
-            form(action='/update_process', method='post')
+        div(id="title")
+            div(class="title") 
+                a(href= '/main') GAME365
+            form(action='/users/update/process', method='post')
                 p 필수 입력사항
                 p
                     input(type='text' name='id' placeholder='ID')

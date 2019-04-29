@@ -12,10 +12,11 @@ html
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
 
-            div(class="title") GAME365
+            div(class="title")
+                a(href= '/main') GAME365
             //-
                 클릭시 home.pug로 이동
-        form(action='/searchgame', method='post')
+        form(action='/main/search', method='get')
             p
                 input(type='search' name='game' placeholder='게임이름')
                 input(type="submit" value='검색')
@@ -28,7 +29,8 @@ html
                 tr
                     -for(var i=0;i<5;i++)
                     th
-                        td 게임이름
+                        td 
+                            a(href= '/project/about') 게임이름
                         //-
                             클릭시 CommonPage.project.pug로 이동
                         td 완성여부

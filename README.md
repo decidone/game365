@@ -85,8 +85,10 @@
 라우팅
 / - /main으로 redirect
 /main - home.pug
-/main/login - login.pug									form /main/login_process시 확인 후 /main으로 
-/main/search - searchgame.pug							검색 결과 다시 /main/search로 redirect
+/main/login - login.pug
+	- form /main/login_process시 확인 후 /main으로 
+/main/search - searchgame.pug
+	- search/process같은거 거쳐서 검색 결과 다시 /main/search로 redirect
 /main/shop - shoppage.pug
 
 /project/dev - project_developer.pug
@@ -95,9 +97,11 @@
 /project/review/list - project_review_list.pug
 /project/about - project_introduce.pug
 /project/new_project - addproject.pug
-/project/list - project_list.pug
+	- form /project/new_project/process 등록 후 /project/list로
 
 /users/library - library.pug
 /users/mypage - mypage.pug
-/users/register - register.pug							form /users/register/process거쳐서 등록 후 /main으로
-/users/update/profile - update_profile.pug				form /users/update/process거쳐서 수정 후 /main으로
+/users/register - register.pug
+	- form /users/register/process거쳐서 등록 후 /main으로
+/users/update/profile - update_profile.pug
+	- form /users/update/process거쳐서 수정 후 /main으로

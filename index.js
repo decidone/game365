@@ -17,9 +17,9 @@ app.set('view engine','pug');
 app.set('views','./pug');
 app.use(bodyparser.urlencoded({extended:true}));
 // /users 요청을 ./api/users로 넘겨준다.
-app.use('/users', require('./api/users/index.js'));
-app.use('/main', require('./api/main/index.js'));
-app.use('/project', require('./api/project/index.js'));
+app.use('/users', require('./api/users/index.js')(app));
+app.use('/main', require('./api/main/index.js')(app));
+app.use('/project', require('./api/project/index.js')(app));
 
 app.get('/',function(req,res){
     res.redirect('/main');

@@ -6,13 +6,15 @@ html
         meta(charset='utf-8')
         title 프로젝트
     body
-         div(id="title")
-            div(class="account") 회원가입  
+        div(id="title")
+            div(class="account")
+                a(href= '/users/register') 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
 
-            div(class="title") GAME365
+            div(class="title")
+                a(href= '/main') GAME365
             //-
                 클릭시 home.pug로 이동
 
@@ -35,4 +37,5 @@ html
             div(class="project-review") 게임평가, 평가리스트
             //-
                 클릭시 CommonPage.projectreview.pug
+                project/review/:gameId로 보내서 맞는 게임평가 페이지로
 

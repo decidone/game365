@@ -7,12 +7,14 @@ html
         title 게임리뷰_더보기
     body
          div(id="title")
-            div(class="account") 회원가입  
+            div(class="account")
+                a(href= '/users/register') 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
 
-            div(class="title") GAME365
+            div(class="title")
+                a(href= '/main') GAME365
             //-
                 클릭시 home.pug로 이동
 
@@ -26,4 +28,6 @@ html
                         td 유저ID
                         td 긍정적/부정정
                         td 평가 상세내용
+            //-
+                DB연동 후 링크로 만들어서 클릭 시 해당 게임 리뷰페이지로
             

@@ -6,11 +6,12 @@ html
         title 프로젝트 생성
     body
         div(id="title")
-            div(class="title") GAME365
+            div(class="title") 
+                a(href= '/main') GAME365
             //-
                 클릭시 home.pug로 이동
         div(id="content")
-            form(action='/addproject', method='post')
+            form(action='/project/new_project/process', method='post')
                 div 게임명
                     input(type='text', name='gamename', placeholder='게임명')
                 fieldset
@@ -46,5 +47,5 @@ html
                     input(type='text' name='introduce')
                 input(type='submit' value='프로젝트 생성')
                     //-
-                        완료시PrivatePage.project.pug로 이동
+                        완료시project_list.pug로 이동
                 

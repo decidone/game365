@@ -8,25 +8,30 @@ html
         title Game365
     body
         div(id="title")
-            div(class="account") 회원가입  
+            div(class="account")
+                a(href= '/users/register') 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
 
-            div(class="title") GAME365
+            div(class="title")
+                a(href= '/main') GAME365
             //-
                 클릭시 home.pug로 이동
         div(id="content")
-            div(class="link-searchgame") 게임찾기
+            div(class="link-searchgame")
+                a(href= '/main/search') 게임 찾기
             //-
                 클릭시 CommonPage.searchGame.pug로 이동
 
-            div(class="link-myproject") 마이프로젝트
+            div(class="link-myproject")
+                a(href= '/project/list') 마이프로젝트
             //-
                 클릭시 Private.projectlist.pug로 이동
                 비로그인시 로그인하시기 바랍니다 창 띄우기
 
-            div(class="link-library") 라이브러리
+            div(class="link-library")
+                a(href= '/users/library') 라이브러리
             //-
                 클릭시 CommonPage.library.pug로 이동
                 비로그인시 로그인하시기 바랍니다 창 띄우기
