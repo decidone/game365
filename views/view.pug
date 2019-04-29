@@ -4,13 +4,13 @@ html
         meta(charset='utf-8')
     body
         h1 Server Side javascript
-        ul
-            each topic in topics
-                li
-                    a(href= '/topic/'+topic)= topic
-        article
-            h2= title
-            =desc
+        //- ul
+        //-     each topic in topics
+        //-         li
+        //-             a(href= '/topic/'+topic)= topic
+        //- article
+        //-     h2= title
+        //-     =desc
         div
             form(action='/topic', method='post')
                 p

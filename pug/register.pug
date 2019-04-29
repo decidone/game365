@@ -1,15 +1,16 @@
 doctype html
+//- /users/register
 html
     head
         link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
-        title 회원정보 수정
+        title 회원 가입
     body
         div(id="title") GAME365
         //-
             클릭시 home.pug로 이동
 
-        form(action='/register', method='post')
+        form(action='/register_proces', method='post')
             p
                 input(type='password' name='password' placeholder='비밀번호')
                 input(type='text' name='name' placeholder='닉네임')
