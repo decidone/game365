@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const app = express();
 const usrCtrl = require('./user.controller')
+app.set('views','./pug');
 // router.get('/',(req, res)=>{
 //     res.send('hello');
 // })

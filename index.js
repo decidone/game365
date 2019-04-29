@@ -14,12 +14,26 @@ var conn = mysql.createConnection({
 
 
 app.set('view engine','pug');
-app.set('views','./views');
+app.set('views','./pug');
 app.use(bodyparser.urlencoded({extended:true}));
 // /users 요청을 ./api/users로 넘겨준다.
 app.use('/users', require('./api/users'));
 
+app.get('/',function(req,res){
+    res.redirect('/home');
+})
 
+app.get('/home',function(req,res){
+    res.render('home');
+})
+
+
+
+
+
+
+
+// 이 아래로 샘플 코드
 app.get('/topic',function(req,res){
     fs.readdir('data', function(err,files){
         if(err){
