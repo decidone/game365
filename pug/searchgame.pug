@@ -2,12 +2,19 @@ doctype html
 //- /main/search
 html
     head
+        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 게임찾기
     body
-        div(id="title") GAME365
-        //-
-            클릭시 home.pug로 이동
+        div(id="title")
+            div(class="account") 회원가입  
+            //-
+                클릭시 ProivatePage.register.pug로 이동
+                로그인시 (ID)님 환영합니다 로 변경
+
+            div(class="title") GAME365
+            //-
+                클릭시 home.pug로 이동
         form(action='/searchgame', method='post')
             p
                 input(type='search' name='game' placeholder='게임이름')

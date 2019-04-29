@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        meta(charset='utf-8')
+        title 회원가입
+    body
+        div(id="title") GAME365
+            form(action='/register', method='post')
+                p 필수 입력사항
+                p
+                    input(type='text' name='id' placeholder='ID')
+                    input(type='password' name='password' placeholder='비밀번호')
+                    input(type='text' name='name' placeholder='닉네임')
+                    input(type='mail' name='mail' placeholder='이메일')
+                p 선택 입력사항
+                p
+                    input(type='text' name='phone' placeholder='핸드폰번호')
+                    input(type='text' name='subject' placeholder='전문분야')
+                    input(type='text' name='gitid' placeholder='git아이디')
+                    
+                p
+                    input(type='submit')
+
+            
