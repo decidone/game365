@@ -86,16 +86,18 @@
 / - /main으로 redirect
 /main - home.pug
 /main/login - login.pug									form /main/login_process시 확인 후 /main으로 
-/main/project - project.pug
-/main/project/review - project_review.pug
-/main/project/review/list - project_review_list.pug
 /main/search - searchgame.pug							검색 결과 다시 /main/search로 redirect
 /main/shop - shoppage.pug
 
-/project - project.pug
+/project/dev - project_developer.pug
+/project/list - project_list.pug
+/project/review - project_review.pug
+/project/review/list - project_review_list.pug
+/project/about - project_introduce.pug
 /project/new_project - addproject.pug
 /project/list - project_list.pug
+
 /users/library - library.pug
 /users/mypage - mypage.pug
-/users/register - register.pug							form /users/register_process거쳐서 등록 후 /main으로
-/users/update_profile - update_profile.pug				form /users/update_process거쳐서 수정 후 /main으로
+/users/register - register.pug							form /users/register/process거쳐서 등록 후 /main으로
+/users/update/profile - update_profile.pug				form /users/update/process거쳐서 수정 후 /main으로

@@ -1,3 +1,3 @@
-exports.list = (req, res)=>{
-    res.render('mypage');
-}
+// exports.list = (req, res)=>{
+//     res.render('mypage');
+// }

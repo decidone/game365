@@ -1,6 +1,6 @@
 var express = require('express');   //express --save 필요
 var bodyparser = require('body-parser');    //body-parser --save 필요
-var app = express();
+var app = express();    // 넘겨서 따로 선언 안해도 되게 만들기
 var fs = require('fs'); // 설치 안해도 쓸 수 있는 파일시스템
 
 // DB 사용을 위한 기초 설정
@@ -17,15 +17,17 @@ app.set('view engine','pug');
 app.set('views','./pug');
 app.use(bodyparser.urlencoded({extended:true}));
 // /users 요청을 ./api/users로 넘겨준다.
-app.use('/users', require('./api/users'));
+app.use('/users', require('./api/users/index.js'));
+app.use('/main', require('./api/main/index.js'));
+app.use('/project', require('./api/project/index.js'));
 
 app.get('/',function(req,res){
-    res.redirect('/home');
+    res.redirect('/main');
 })
 
-app.get('/home',function(req,res){
-    res.render('home');
-})
+// app.get('/main',function(req,res){
+//     res.render('home');
+// })
 
 
 
