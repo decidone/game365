@@ -2,11 +2,11 @@ doctype html
 //- /main/project/review/list
 html
     head
-        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 게임리뷰_더보기
     body
-         div(id="title")
+        div(id="title")
             div(class="account") 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
@@ -16,14 +16,14 @@ html
             //-
                 클릭시 home.pug로 이동
 
-        div(id="project")
+        div(id="content")
             div(class="project-title") 게임제목
-            div(id="reviews")
-            table
-                tr
+            div(class="reviews")
+                table
                     -for(var i=0;i<5;i++)
-                    th
-                        td 유저ID
-                        td 긍정적/부정정
-                        td 평가 상세내용
-            
+                        tr
+                            th
+                                td(class="reviews_id") 유저ID
+                                td(class="reviews_rating") 긍정적/부정정
+                                td(class="reviews_text") 평가 상세내용
+                

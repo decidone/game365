@@ -2,7 +2,7 @@ doctype html
 //- /main/search
 html
     head
-        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 게임찾기
     body
@@ -15,20 +15,36 @@ html
             div(class="title") GAME365
             //-
                 클릭시 home.pug로 이동
-        form(action='/searchgame', method='post')
-            p
-                input(type='search' name='game' placeholder='게임이름')
-                input(type="submit" value='검색')
-                //-
-                    검색하면 아래 리스트들이 검색결과를 기반으로 재정렬됨
-                    검색 후 다시 여기로 redirect
-
-        div(id="library")
-            table
-                tr
-                    -for(var i=0;i<5;i++)
-                    th
-                        td 게임이름
+        div(id="content")
+            div(class="searchbar")
+                form(action='/searchgame', method='post')
+                    fieldset
+                        legend 검색창
+                        div(class='a') 액션
+                            input(type='checkbox' name='keyword' value='action')
+                        div(class='a') 어드벤쳐
+                            input(type='checkbox' name='keyword' value='adventure')
+                        div(class='a') 퍼즐
+                            input(type='checkbox' name='keyword' value='puzzle')
+                        div(class='a') 1인칭
+                            input(type='checkbox' name='keyword' value='fps')
+                        div(class='a') 3인칭
+                            input(type='checkbox' name='keyword' value='tps')
+                        div(class='a') 슈팅
+                            input(type='checkbox' name='keyword' value='shooting')
+                        div(class="search_by_text")
+                            input(type='search' name='game' placeholder='게임이름')
+                            input(type="submit" value='검색')
                         //-
-                            클릭시 CommonPage.project.pug로 이동
-                        td 완성여부
+                            검색하면 아래 리스트들이 검색결과를 기반으로 재정렬됨
+                            검색 후 다시 여기로 redirect
+
+        
+            table(class="gametlist")
+                -for(var i=0;i<5;i++)
+                    tr
+                        th
+                            td(class="gamelist_gamename") 게임이름
+                            //-
+                                클릭시 CommonPage.project.pug로 이동
+                            td(class="gamemlist_perfection") 완성여부

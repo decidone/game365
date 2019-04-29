@@ -8,8 +8,9 @@ app.set('views', './pug');
 app.set('view engine', 'pug')
 
 app.get('/test',function(req,res){
-    res.render('project_introduce')
+    res.render('update_profile')
 })
+
 
 app.listen(8080,()=>{
     console.log('8080 port Connected!!!!');

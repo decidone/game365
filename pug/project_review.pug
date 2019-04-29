@@ -2,7 +2,7 @@ doctype html
 //- /main/project/review
 html
     head
-        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 게임리뷰
     body
@@ -16,9 +16,10 @@ html
             //-
                 클릭시 home.pug로 이동
 
-        div(id="project")
+        div(id="content")
             div(class="project-title") 게임제목
-            div(class="project-myreview") 자기가쓴 평가, 평가입력버튼
-            div(class="project-positive_review") 긍정적평가더보기
-            div(class="project-negative_review") 부정적평가더보기
-            div(class="project-all_review") 모든리뷰더보기
+            div(class="project_myreview") 자기가쓴 평가, 평가입력버튼
+            div(id="tworeviews")
+                div(class="project_positive_review") 긍정적평가더보기
+                div(class="project_negative_review") 부정적평가더보기
+            div(class="project_all_review") 모든리뷰더보기
