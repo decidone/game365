@@ -1,11 +1,12 @@
 doctype html
+//- /users/update_profile
 html
     head
         meta(charset='utf-8')
-        title 회원가입
+        title 회원정보 수정
     body
         div(id="title") GAME365
-            form(action='/register', method='post')
+            form(action='/update_process', method='post')
                 p 필수 입력사항
                 p
                     input(type='text' name='id' placeholder='ID')

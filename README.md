@@ -1,9 +1,18 @@
 ﻿# game365
 
+
 실행을 위한 초기 설정
 1. git에서 다운
 2. npm install	//package-lock.json 파일에 설정이 다 되어있으므로 npm install만 입력하면 된다.
 3. supervisor index.js
+
+
+사용 모듈
+1. express
+2. pug
+3. supervisor
+4. body-parser
+5. mysql
 
 
 전체 공통적인 레이아웃 - 타이틀, 유저ID 및 로그아웃
@@ -62,10 +71,31 @@
 	- 구인 구직 버튼
 
 
-
 개발 순서
 1. pug페이지 및 라우팅 잡는 작업
 2. 페이지 별 기본적인 레이아웃 잡기
 3. 로그인, 게임리스트 등 기본적인 DB 설정
 4. 게임 등록, dlc추가 등 기능적인 부분 DB 설정, 기능 구현
 5. 게시판, 채팅 등 심화적인 기능 구현
+
+해야 할 일
+1. 반복되는 타이틀 header로 묶어서 참조시키기
+2. 아이디 정보는 쿠키나 세션으로 구현
+
+라우팅
+/ - /main으로 redirect
+/main - home.pug
+/main/login - login.pug									form /main/login_process시 확인 후 /main으로 
+/main/project - project.pug
+/main/project/review - project_review.pug
+/main/project/review/list - project_review_list.pug
+/main/search - searchgame.pug							검색 결과 다시 /main/search로 redirect
+/main/shop - shoppage.pug
+
+/project - project.pug
+/project/new_project - addproject.pug
+/project/list - project_list.pug
+/users/library - library.pug
+/users/mypage - mypage.pug
+/users/register - register.pug							form /users/register_process거쳐서 등록 후 /main으로
+/users/update_profile - update_profile.pug				form /users/update_process거쳐서 수정 후 /main으로
