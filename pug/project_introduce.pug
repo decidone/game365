@@ -2,7 +2,7 @@ doctype html
 //- /main/project
 html
     head
-        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 프로젝트
     body
@@ -18,24 +18,24 @@ html
             //-
                 클릭시 home.pug로 이동
 
-        div(id="project")
+        div(id="content")
             div(class="project-title") 게임제목
             div(class="project-photo") 메인사진
-            div(class="project-credit") 크레딧
-            div(class="project-keyword") 키워드
-            div(class="project-rating") 심의등급
-            div(class="project-language") 지원언어
-            div(class="project-interaction_button") 프로젝트창 or 상점페이지
-            //-
-                프로젝트 참여자인가? -> 프로젝트창 버튼
-                일반 유저인가? -> 상점페이지 CommonPage.shoppage.pug로 이동
-            div(class="project-hire") 프로젝트개발참여
-            //-
-                채용 활성화 상태일 경우에만 버튼 활성화
-            
-            div(class="project-introduce") 게임소개
-            div(class="project-review") 게임평가, 평가리스트
-            //-
-                클릭시 CommonPage.projectreview.pug
-                project/review/:gameId로 보내서 맞는 게임평가 페이지로
+            div(id="project-leftspace")
+                div(class="project-credit") 크레딧
+                div(class="project-keyword") 키워드
+                div(class="project-rating") 심의등급
+                div(class="project-language") 지원언어
+                div(class="project-interaction_button") 프로젝트창 or 상점페이지
+                //-
+                    프로젝트 참여자인가? -> 프로젝트창 버튼
+                    일반 유저인가? -> 상점페이지 CommonPage.shoppage.pug로 이동
+                div(class="project-hire") 프로젝트개발참여
+                //-
+                    채용 활성화 상태일 경우에만 버튼 활성화
+            div(id="project-downspace")
+                div(class="project-introduce") 게임소개
+                div(class="project-review") 게임평가, 평가리스트
+                //-
+                    클릭시 CommonPage.projectreview.pug
 

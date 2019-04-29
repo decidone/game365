@@ -2,36 +2,36 @@ doctype html
 //- /project/list
 html
     head
-        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 프로젝트리스트
     body
         div(id="title")
-            div(class="title") 
+            div(class="account") 회원가입  
+            //-
+                클릭시 ProivatePage.register.pug로 이동
+                로그인시 (ID)님 환영합니다 로 변경
+
+            div(class="title")
                 a(href= '/main') GAME365
-        //-
-            클릭시 home.pug로 이동
+            //-
+                클릭시 home.pug로 이동
 
-        div(class="link-update_profile")
-            a(href= '/users/update/profile') 내정보수정
-        //-
-            클릭시 Private.updateprofile.pug로 이동
-
-        div(id="projectlist")
-            table
-                tr
-                    -for(var i=0;i<5;i++)
-                    th
-                        td 게임이름
-                        //-
-                            클릭시 Private.project.pug로 이동
-                        td PDID
-                        td 자신의역할
-        div(id="addproject")
-            a(href= '/project/new_project') 프로젝트 생성
-        //-
-            클릭시 Private.addproject.pug로 이동
-        div(id="searchhiredgame")
-            a(href= '/main/search') 구인구직
-        //- 
-            클릭시 Common.searchgame.pug로 이동
+        div(id="content")
+            table(class="projectlist")
+                -for(var i=0;i<5;i++)
+                    tr
+                        th
+                            td(class="projectlist_gamename") 게임이름
+                            //-
+                                클릭시 Private.project.pug로 이동
+                            td(class="projectlist_PDID") PDID
+                            td(class="projectlist_role") 자신의역할
+            div(class="addproject")
+                a(href= '/project/new_project') 프로젝트 생성
+            //-
+                클릭시 Private.addproject.pug로 이동
+            div(class="searchhiredgame")
+                a(href= '/main/search') 구인구직
+            //- 
+                클릭시 Common.searchgmae.pug로 이동
