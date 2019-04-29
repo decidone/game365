@@ -1,0 +1,73 @@
+#title{
+    height:90px;
+    width:auto;
+    margin:10px 50px;
+}
+.account{
+    border:1px solid black;
+    float:right;
+}
+.title{
+    clear:both;
+    text-align:center;
+    color:greenyellow;
+    background:grey;
+    font-size:50px;
+}
+
+
+#content{
+    float:auto;
+    margin:10px;
+    width:auto;
+    height:70px;
+}
+
+.link-searchgame, .link-myproject, .link-library{
+    border:1px solid black;
+    position:static;
+    margin:10px 40px;
+    float:left;
+    text-align:center;
+    width:200px;
+    height:40px;
+    font-size:30px;
+}
+
+#lanking{
+    float:auto;
+    width:auto;
+    height:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.link-lanking_top1{
+    border:1px solid black;
+    margin:10px 40px;
+    float:left;
+    text-align:center;
+    width:60%;
+    height:90%;
+    font-size:30px;
+}
+
+.link-lanking_other{
+    border:1px solid black;
+    margin:10px 40px;
+    float:left;
+    text-align:center;
+    width:20%;
+    height:90%;
+    font-size:30px;
+}
+
+table{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+tr, td{
+    border:1px solid black;
+}
