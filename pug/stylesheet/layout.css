@@ -1,3 +1,5 @@
+
+
 #title{
     height:90px;
     width:auto;
@@ -23,7 +25,9 @@
     height:70px;
 }
 
-.link-searchgame, .link-myproject, .link-library{
+.link-searchgame,
+.link-myproject,
+.link-library{
     border:1px solid black;
     position:static;
     margin:10px 40px;
@@ -69,5 +73,54 @@ table{
 }
 
 tr, td{
+    border:1px solid black;
+}
+
+.link-update_profile,
+.link-library2,
+.link-myproject2,
+.link-withdrawal{
+    margin-left:auto;
+    margin-right:auto;
+    clear:auto;
+    border:1px solid black;
+    background:blue;
+    color:white;    
+    width:200px;
+    text-align:center;
+    font-size:30px;
+}
+
+.project-title{
+    width:100%;
+    height:40px;
+    text-align:center;
+    font-size:30px;
+    border:1px solid black;
+    float:left;
+    margin:0 0 20px 0;
+}
+
+.project-photo{
+    float:left;
+    width:480px;
+    height:240px;
+    border:1px solid black;
+    margin:0 20px 0 0;
+}
+.project-information{
+    float:left;
+    width: 62%;
+    height:240px;
+    border:1px solid black;
+    margin:0 20px 0 0;
+}
+.project-workspace,
+.project-chat,
+.project-deleteproject{
+    margin:10px;
+    float:left;
+    width:100%;
+    height:60px;
     border:1px solid black;
 }

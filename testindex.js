@@ -8,7 +8,7 @@ app.set('views', './pug');
 app.set('view engine', 'pug')
 
 app.get('/test',function(req,res){
-    res.render('mypage')
+    res.render('project_introduce')
 })
 
 app.listen(8080,()=>{
