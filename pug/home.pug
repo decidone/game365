@@ -13,6 +13,8 @@ html
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
+            div(class="login")
+                a(href= '/main/login') 로그인
 
             div(class="title")
                 a(href= '/main') GAME365
@@ -25,7 +27,7 @@ html
                 클릭시 CommonPage.searchGame.pug로 이동
 
             div(class="link-myproject")
-                a(href= '/project/list') 마이프로젝트
+                a(href= '/users/mypage') 내 정보 관리
             //-
                 클릭시 Private.projectlist.pug로 이동
                 비로그인시 로그인하시기 바랍니다 창 띄우기
@@ -35,12 +37,12 @@ html
             //-
                 클릭시 CommonPage.library.pug로 이동
                 비로그인시 로그인하시기 바랍니다 창 띄우기
-                
-        div(id="lanking")
-            div(class="link-lanking_top1") 랭킹1위게임
+            p
+
+        div(id="ranking")
+            div(class="link-ranking_top1") 1위~10위 게임
+                each game in games
+                    li
+                        a(href= '/project/about/'+game.pro_id)= game.pro_name
             //-
                 클릭시 랭킹1위에 오른 해당 게임으로 이동
-
-            div(class="link-lanking_other") 2위~10위선호도순
-            //-
-                클릭시 해당 게임으로 이동

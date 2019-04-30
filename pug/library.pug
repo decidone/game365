@@ -6,11 +6,6 @@ html
         title 라이브러리
     body
         div(id="title")
-            div(class="account") 회원가입  
-            //-
-                클릭시 ProivatePage.register.pug로 이동
-                로그인시 (ID)님 환영합니다 로 변경
-            
             div(class="title") 
                 a(href= '/main') GAME365
             //-
@@ -19,9 +14,12 @@ html
         div(id="content")
             table
                 tr 
-                    td 게임이름
+                    td 
+                        //- 시간 상 문제로 샘플데이터 사용
+                        a(href= '/project/about/1') enter the gungeon
                 tr
-                    td 게임이름
+                    td
+                        a(href= '/project/about/2') test
                 tr  
                     td 게임이름
                 tr

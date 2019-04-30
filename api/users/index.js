@@ -1,18 +1,7 @@
-module.exports = function(app){
+module.exports = function(app, conn, bodyparser){
     const express = require('express');
     const router = express.Router();
-    //const usrCtrl = require('./user.controller')
-    // DB 사용을 위한 기초 설정
-    var mysql = require('mysql');
-    var conn = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'root',
-        password : 'cs1234',
-        database : 'game365'
-    });
-
-    //하나의 라우팅에 그리 많은 정보가 현재까진 없으므로 따로 떼진 않는다.
-    //router.get('/', usrCtrl.list);
+    router.use(express.static('pug'));
 
     router.get('/library',(req, res)=>{
         res.render('library');

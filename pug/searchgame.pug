@@ -7,7 +7,8 @@ html
         title 게임찾기
     body
         div(id="title")
-            div(class="account") 회원가입  
+            div(class="account")
+                a(href= '/users/register') 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경
@@ -42,10 +43,18 @@ html
 
         
             table(class="gametlist")
-                -for(var i=0;i<5;i++)
                     tr
                         th
-                            td(class="gamelist_gamename") 게임이름
+                            td(class="gamelist_gamename") 
+                                a(href= '/project/about/1') enter the gungeon
+                            //-
+                                클릭시 CommonPage.project.pug로 이동
+                            td(class="gamemlist_perfection") 완성
+            table(class="gametlist")
+                -for(var i=0;i<4;i++)
+                    tr
+                        th
+                            td(class="gamelist_gamename") 게임 이름
                             //-
                                 클릭시 CommonPage.project.pug로 이동
                             td(class="gamemlist_perfection") 완성여부

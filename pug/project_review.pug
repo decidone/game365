@@ -22,6 +22,9 @@ html
             div(class="project-title") 게임제목
             div(class="project_myreview") 자기가쓴 평가, 평가입력버튼
             div(id="tworeviews")
-                div(class="project_positive_review") 긍정적평가더보기
-                div(class="project_negative_review") 부정적평가더보기
-            div(class="project_all_review") 모든리뷰더보기
+                div(class="project_positive_review")
+                    a(href= '/project/review/list') 긍정적평가더보기
+                div(class="project_negative_review")
+                    a(href= '/project/review/list') 부정적평가더보기
+            div(class="project_all_review")
+                a(href= '/project/review/list') 모든리뷰더보기
