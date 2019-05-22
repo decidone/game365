@@ -2,12 +2,13 @@ doctype html
 //- /users/update_profile
 html
     head
-        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 회원정보 수정
     body
         div(id="title")
-            div(class="account") 회원가입  
+            div(class="account")
+                a(href= '/users/register') 회원가입  
             //-
                 클릭시 ProivatePage.register.pug로 이동
                 로그인시 (ID)님 환영합니다 로 변경

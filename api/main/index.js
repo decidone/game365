@@ -21,15 +21,15 @@ module.exports = function (app, conn, bodyparser) {
     router.post('/login/process', (req, res) => {
         const id = req.body.id;
         const password = req.body.password;
-        conn.query('SELECT * FROM user where user_id=\'' + id + '\' and user_pass=\''+password+'\'', function (err, results) {
+        conn.query('SELECT * FROM user where user_id=\'' + id + '\' and user_pass=\'' + password + '\'', function (err, results) {
             if (err) {
                 console.log(err);
             }
             //로그인 성공 시
-            if(results != ''){
+            if (results != '') {
                 res.redirect('/main');
-            }else{
-            //로그인 실패 시
+            } else {
+                //로그인 실패 시
                 res.render('login');
             }
         });

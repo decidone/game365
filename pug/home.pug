@@ -41,8 +41,10 @@ html
 
         div(id="ranking")
             div(class="link-ranking_top1") 1위~10위 게임
-                each game in games
-                    li
-                        a(href= '/project/about/'+game.pro_id)= game.pro_name
+                table
+                    each game in games
+                        tr
+                            th
+                                a(href= '/project/about/'+game.pro_id)= game.pro_name
             //-
                 클릭시 랭킹1위에 오른 해당 게임으로 이동

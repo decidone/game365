@@ -136,12 +136,14 @@ tr, td{
     width:100%;
     height:10%;
     border:1px solid black;
+    text-align:center;
 }
 
 .project-keyword{
     width:100%;
     height:25%;
     border:1px solid black;
+    text-align:center;
 }
 
 .project-interaction_button{

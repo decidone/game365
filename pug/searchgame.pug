@@ -50,11 +50,17 @@ html
                             //-
                                 클릭시 CommonPage.project.pug로 이동
                             td(class="gamemlist_perfection") 완성
-            table(class="gametlist")
-                -for(var i=0;i<4;i++)
                     tr
                         th
-                            td(class="gamelist_gamename") 게임 이름
+                            td(class="gamelist_gamename") 
+                                a(href= '/project/about/2') baba is you
                             //-
                                 클릭시 CommonPage.project.pug로 이동
-                            td(class="gamemlist_perfection") 완성여부
+                            td(class="gamemlist_perfection") 개발중
+                    tr
+                        th
+                            td(class="gamelist_gamename") 
+                                a(href= '/project/about/3') minecraft
+                            //-
+                                클릭시 CommonPage.project.pug로 이동
+                            td(class="gamemlist_perfection") 완성

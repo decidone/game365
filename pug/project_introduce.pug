@@ -2,7 +2,7 @@ doctype html
 //- /main/project
 html
     head
-        link(rel="stylesheet" href="./stylesheet/layout.css" type="text/css")
+        link(rel="stylesheet" href="../stylesheet/layout.css" type="text/css")
         meta(charset='utf-8')
         title 프로젝트
     body
@@ -25,14 +25,12 @@ html
             div(class="project-photo") 메인사진
             
             div(id="project-leftspace")
-                div(class="project-credit") 크레딧
+                div(class="project-credit") 크레딧 : 
                     each member in members
-                        li
-                            =member.user_id
-                div(class="project-keyword") 키워드
+                        =member.user_id
+                div(class="project-keyword") 키워드 : 
                     each keyword in keywords
-                        li
-                            =keyword.keyword
+                            =keyword.keyword+","
                 div(class="project-interaction_button")
                     a(href= '/project/dev') 프로젝트 창
                 div(class="project-interaction_button")
@@ -55,8 +53,6 @@ html
                     =games[0].intro
                 div(class="project-review")
                     a(href= '/project/review') 게임평가
-                div
-                    a(href= '/project/review/list') 평가리스트
                 //-
                     클릭시 CommonPage.projectreview.pug
 
